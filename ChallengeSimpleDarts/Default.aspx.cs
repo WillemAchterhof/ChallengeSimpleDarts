@@ -17,7 +17,14 @@ namespace ChallengeSimpleDarts
 
 		protected void okButton_Click(object sender, EventArgs e)
 		{
+			resultLabel.Text = string.Empty;
 			Darts.Dart dart = new Darts.Dart(randomTrow);
+
+			for (int i = 0; i < 20; i++)
+			{
+				dart.Trow();
+				resultLabel.Text += dart.Score.ToString() + "<br />";
+			}
 		}
 	}
 }

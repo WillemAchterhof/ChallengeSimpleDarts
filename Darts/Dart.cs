@@ -8,15 +8,48 @@ namespace Darts
 	public class Dart
 	{
 		public int Score { get; set; }
+		public bool RingDouble { get; set; }
+		public bool RingTriple { get; set; }
+		public bool BullsEyeOuter { get; set; }
+		public bool BullsEyeInner { get; set; }
+		private Random random { get; set; }
+		
 		public Dart(Random random)
 		{
+			this.random = random;
+			this.RingDouble = false;
+			this.RingTriple = false;
+			this.BullsEyeInner = false;
+			this.BullsEyeOuter = false;
 		}
-		string result = string.Empty;
-		public string Trow()
+		public void Trow()
 		{
-			result = "1";
+			this.Score = this.random.Next(0, 21);
+			int _score = this.random.Next(101)
 
-			return result;
+			if (this.Score == 0) {
+				BullsEyeHit(_score);
+			}
+			else {
+				Ringhit(_score);
+			}
+
+		}
+		private void BullsEyeHit(int _score)
+		{
+			if (_score <= 5) { 
+				this.BullsEyeInner = true; }
+			else { 
+				this.BullsEyeOuter = true; }
+		}
+		private void Ringhit(int _score)
+		{
+			if (_score <= 5) {
+				RingDouble = true;
+			}
+			else if (_score >= 95) {
+				RingTriple = true;
+			}
 		}
 	}
 }
