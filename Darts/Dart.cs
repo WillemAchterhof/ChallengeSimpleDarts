@@ -13,7 +13,7 @@ namespace Darts
 		public bool BullsEyeOuter { get; set; }
 		public bool BullsEyeInner { get; set; }
 		private Random random { get; set; }
-		
+
 		public Dart(Random random)
 		{
 			this.random = random;
@@ -25,7 +25,7 @@ namespace Darts
 		public void Trow()
 		{
 			this.Score = this.random.Next(0, 21);
-			int _score = this.random.Next(101)
+			int _score = this.random.Next(101);
 
 			if (this.Score == 0) {
 				BullsEyeHit(_score);
