@@ -7,12 +7,16 @@ namespace Darts
 {
 	public class Dart
 	{
+		public int Score { get; set; }
 		public Dart(Random random)
 		{
 		}
-		public void Trow()
+		string result = string.Empty;
+		public string Trow()
 		{
+			result = "1";
 
+			return result;
 		}
 	}
 }
