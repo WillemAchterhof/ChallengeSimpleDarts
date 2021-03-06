@@ -24,10 +24,7 @@ namespace ChallengeSimpleDarts
 				
 			resultLabel.Text = string.Empty;
 
-			Game.PlayGame(Player1, Player2);
-
-			// Should I make a different Method for this?
-			string winningPlayer = (Player1.Score > Player2.Score) ? Player1.Name : Player2.Name;
+			string winningPlayer = Game.PlayGame(Player1, Player2);
 
 			resultLabel.Text = DisplayResult.ResultGame(Player1, Player2, winningPlayer);
 		}

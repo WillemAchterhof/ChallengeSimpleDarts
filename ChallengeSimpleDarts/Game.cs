@@ -9,13 +9,18 @@ namespace ChallengeSimpleDarts
 	public class Game
 	{
 		static Dart dart = new Dart(new Random());
-		public static void PlayGame(Player firstPlayer, Player secondPlayer)
+		public static string PlayGame(Player firstPlayer, Player secondPlayer)
 		{
 			while (firstPlayer.Score < 300 && secondPlayer.Score < 300)
 			{
 				Trow(firstPlayer);
 				Trow(secondPlayer);
 			}
+
+			string winningPlayerName = (firstPlayer.Score > secondPlayer.Score) ? firstPlayer.Name : secondPlayer.Name;
+
+			return winningPlayerName;
+;
 		}
 		private static void Trow(Player player)
 		{
