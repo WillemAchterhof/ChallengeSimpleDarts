@@ -31,8 +31,8 @@ namespace Darts
 			this.BullsEyeInner = (this.Score == 0 && score <= 5) ? true : false;
 			this.BullsEyeOuter = (this.Score == 0 && score > 5) ? true : false;
 
-			this.RingDouble = (!this.BullsEyeInner && !this.BullsEyeOuter && score <= 5) ? true : false;
-			this.RingTriple = (!this.BullsEyeInner && !this.BullsEyeOuter && score > 95) ? true : false;
+			this.RingDouble = (this.Score != 0 && score <= 5) ? true : false;
+			this.RingTriple = (this.Score != 0 && score > 95) ? true : false;
 		}
 	}
 }
