@@ -12,7 +12,8 @@ namespace Darts
 		public bool RingTriple { get; set; }
 		public bool BullsEyeOuter { get; set; }
 		public bool BullsEyeInner { get; set; }
-		private Random random { get; set; }
+
+		private Random random;
 
 		public Dart(Random random)
 		{
