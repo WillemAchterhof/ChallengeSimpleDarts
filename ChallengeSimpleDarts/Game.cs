@@ -13,19 +13,18 @@ namespace ChallengeSimpleDarts
 		{
 			while (firstPlayer.Score < 300 && secondPlayer.Score < 300)
 			{
-				for (int i = 0; i < 3; i++)
-				{
-					dart.Trow();
-					ringHit(dart.Score);
-					firstPlayer.Score += dart.Score;
-				}
-				for (int i = 0; i < 3; i++)
-				{
-					dart.Trow();
-					ringHit(dart.Score);
-					secondPlayer.Score += dart.Score;
-				}
+				Trow(firstPlayer);
+				Trow(secondPlayer);
 			}
+		}
+		private static void Trow(Player player)
+		{
+				for (int i = 0; i < 3; i++)
+				{
+					dart.Trow();
+					ringHit(dart.Score);
+					player.Score += dart.Score;
+				}
 		}
 		private static void ringHit(int score)
 		{
