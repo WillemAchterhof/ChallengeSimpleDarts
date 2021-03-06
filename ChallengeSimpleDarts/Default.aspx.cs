@@ -22,8 +22,6 @@ namespace ChallengeSimpleDarts
 			Player1.Name = "Willem";
 			Player2.Name = "Mark";
 				
-			resultLabel.Text = string.Empty;
-
 			string winningPlayer = Game.PlayGame(Player1, Player2);
 
 			resultLabel.Text = DisplayResult.ResultGame(Player1, Player2, winningPlayer);
