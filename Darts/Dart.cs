@@ -25,29 +25,28 @@ namespace Darts
 		public void Trow()
 		{
 			this.Score = this.random.Next(0, 21);
-			int _score = this.random.Next(101);
+			int score = this.random.Next(101);
 
 			if (this.Score == 0) {
-				BullsEyeHit(_score);
+				BullsEyeHit(score);
 			}
 			else {
-				Ringhit(_score);
+				Ringhit(score);
 			}
-
 		}
-		private void BullsEyeHit(int _score)
+		private void BullsEyeHit(int score)
 		{
-			if (_score <= 5) { 
+			if (score <= 5) { 
 				this.BullsEyeInner = true; }
 			else { 
 				this.BullsEyeOuter = true; }
 		}
-		private void Ringhit(int _score)
+		private void Ringhit(int score)
 		{
-			if (_score <= 5) {
+			if (score <= 5) {
 				RingDouble = true;
 			}
-			else if (_score >= 95) {
+			else if (score >= 95) {
 				RingTriple = true;
 			}
 		}
