@@ -31,7 +31,7 @@ namespace Darts
 				BullsEyeHit(score);
 			}
 			else {
-				Ringhit(score);
+				RingHit(score);
 			}
 		}
 		private void BullsEyeHit(int score)
@@ -41,12 +41,12 @@ namespace Darts
 			else { 
 				this.BullsEyeOuter = true; }
 		}
-		private void Ringhit(int score)
+		private void RingHit(int score)
 		{
 			if (score <= 5) {
 				RingDouble = true;
 			}
-			else if (score >= 95) {
+			else if (score > 95) {
 				RingTriple = true;
 			}
 		}
