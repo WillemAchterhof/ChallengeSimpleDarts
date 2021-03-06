@@ -27,7 +27,6 @@ namespace ChallengeSimpleDarts
 				}
 			}
 		}
-
 		private static void ringHit(int score)
 		{
 			score = (dart.BullsEyeOuter) ? 25 : score;
@@ -35,17 +34,7 @@ namespace ChallengeSimpleDarts
 			score = (dart.RingDouble) ? score * 2 : score;
 			score = (dart.RingTriple) ? score * 3 : score;
 
-			ringHitToFalse();
-
 			dart.Score = score;
-		}
-
-		private static void ringHitToFalse()
-		{
-			dart.BullsEyeOuter = false;
-			dart.BullsEyeInner = false;
-			dart.RingDouble = false;
-			dart.RingTriple = false;
 		}
 	}
 }
